@@ -316,4 +316,31 @@ p{
 
 }
 
-/* - - - - SOLUTION SECTION - - - - */
+/* - - - - POURQUOI NOUS 1 SECTION - - - - */
+
+
+#frame{
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    background-color: #80DBDB;
+}
+
+#halfpic{
+    width: 50%;
+    height: 100%;
+    float: right;
+    object-fit: cover;
+}
+
+#explain{
+    margin: 40px;
+    width: calc(50% - 80px);
+    height: 100%;
+    top: 10%;
+    position: relative;
+    font-size: 23px;
+}
+
+#explain span{
+    font-weight: bold;
+}
