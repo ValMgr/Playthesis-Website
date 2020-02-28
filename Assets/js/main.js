@@ -18,6 +18,19 @@ page.addEventListener('scroll', function() {
       dots[i].classList.add('invert-dots');
     }
   }
+  else if(page.scrollTop > window.innerHeight*4.5){
+    document.getElementById('current-position').classList.add('invert-text')
+    document.getElementById('title').classList.add('invert-text')
+    rightLinks[0].classList.add('invert-bouton')
+
+    for(i=1;i<rightLinks.length;i++){
+      rightLinks[i].classList.add('invert-text')
+    }
+
+    for(i=0;i<dots.length;i++){
+      dots[i].classList.add('invert-dots');
+    }
+  }
   else{
     document.getElementById('current-position').classList.remove('invert-text')
     document.getElementById('title').classList.remove('invert-text')
