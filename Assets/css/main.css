@@ -41,6 +41,15 @@ a{
     background-color: black;
 }
 
+#intro video{
+    grid-row: 1 / 7;
+    grid-column: 1 / 7;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
 #logo-gif{
     width: 100%;
     height: 100%;
@@ -183,6 +192,7 @@ a{
 p{
     font-family: 'GothamBook';
     font-size: 20px;
+    line-height: 1;
 }
 
 
@@ -287,6 +297,12 @@ p{
 
 }
 
+#mute img{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
 /* - - - - SOLUTION SECTION - - - - */
 
 #solution p {
@@ -320,7 +336,7 @@ p{
 }
 
 #hl3::before{
-    content: "électromyographique";
+    content: "electromyographique";
     left: 50px;
     top: 10px;
 }
@@ -456,7 +472,7 @@ p{
     height: 100%;
     top: 10%;
     position: relative;
-    font-size: 23px;
+    font-size: 1.2em;
 }
 
 #explain span{
@@ -478,7 +494,7 @@ p{
     height: 100%;
     top: 10%;
     position: relative;
-    font-size: 23px;
+    font-size: 1.2em;
     float: right;
 }
 
@@ -515,9 +531,10 @@ p{
 
 
 #our-games{
-    background-color: #1A1F16;
+    background-color: #242424;
     grid-template-columns: repeat(3, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
+    position: relative;
 }
 
 
@@ -530,15 +547,51 @@ p{
     border-right: 1px solid white;
 }
 
+
+
 #game2{
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
     grid-row: 1 / 3;
-    -ms-grid-column: 2;
-    grid-column: 2;
+    grid-column: 2 / 3;
+    height: 100%;
+    width: 100%;
     border-bottom: 1px solid white;
     border-left: 1px solid white;
     border-right: 1px solid white;
+    position: absolute;
+    cursor: pointer;
+}
+
+#game2 img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#game2 img{
+    opacity: 1;
+    transition: .25s ease;
+}
+
+#game2 a:hover img{
+    opacity: 0.5;
+}
+
+.gameTitle{
+    opacity: 0 !important;
+    width: 100% !important;
+    height: 50% !important;
+    transform: translateY(-150%);
+    transform: .75s ease;
+}
+
+#game2 a:hover > .gameTitle{
+    opacity: 1 !important;
+}
+
+#game2 a:hover h3{
+    opacity: 1;
+    transition: .75s ease;
+
 }
 
 #game3{

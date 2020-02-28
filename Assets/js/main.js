@@ -109,3 +109,18 @@ function UpdateScroll(){
       break;
   }
 }
+
+
+function muteSound(){
+  var audio = document.getElementById('myVideo');
+  var btn = document.getElementById('mute-btn');
+
+  if(audio.muted == false){
+    audio.muted = true;
+    btn.src = 'Assets/pictures/icons/mute.png';
+  }
+  else{
+    audio.muted = false;
+    btn.src = 'Assets/pictures/icons/speaker.png';
+  }
+}

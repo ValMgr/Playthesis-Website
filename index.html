@@ -6,6 +6,8 @@
     <meta name="description" content="Playthesis a pour but de rééduquer le biceps et le triceps avant appareillage de prothèse myoélectrique. À travers des mini-jeux étudiés pour vous faire travailler en douceur, et dans la bonne humeur, apprenez à maîtriser la force, et la précision de vos contractions musculaires. " />
     <meta name="keywords" content="myoélectrique, myoarm, technologie, amputation, jeux vidéo, unity, handicap, accessibilité, Bordeaux, MMI, INCIA, tour de Gassie, Playthesis, prothèse, contact" />
     <title>Playthesis</title>
+    <link rel="shortcut icon" href="Assets/pictures/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="Assets/pictures/favicon2.png" type="image/png">
     <link rel="stylesheet" href="Assets/css/font.css">
     <link rel="stylesheet" href="Assets/css/main.css">
 
@@ -13,7 +15,7 @@
 <body>
 
     <div class="fixed-element">
-        <!-- <img src="Assets/pictures/gif logo.gif" id="logo-gif"> -->
+        <img src="Assets/pictures/gif logo.gif" id="logo-gif">
 
         <h1 id="title" class="invert-text"><a href="index.html">PLAYTHESIS</a></h1>
 
@@ -36,6 +38,7 @@
             <a class="bouton invert-bouton">Connexion</a>
             <a class="invert-text" href="about.html">A propos</a>
             <a class="invert-text" href="contact.html">Contact</a>
+            <a class="invert-text" id="mute" onclick="muteSound()"><img id="mute-btn" src="Assets/pictures/icons/mute.png"></a>
 
 
         </nav>
@@ -44,7 +47,10 @@
 
     <div id="content">
 
-        <section id="intro">            
+        <section id="intro">     
+            <video autoplay muted loop id="myVideo">
+                <source src="Assets/video/Video1.mp4" type="video/mp4">
+        </video>       
         </section>
 
         <section id="concept">
@@ -173,7 +179,12 @@
         <section id="our-games">
 
         <div class="games" id="game1"></div>
-        <div class="games" id="game2"></div>
+        <div class="games" id="game2">
+            <a>
+                <img src="Assets/pictures/Games/Seiko/Seiko.png">
+                <img class="gameTitle" src="Assets/pictures/Games/Seiko/logo.png">
+            </a>
+        </div>
         <div class="games" id="game3"></div>
         <div class="games" id="game4"></div>
         <div class="games" id="game5"></div>
