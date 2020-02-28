@@ -2,8 +2,6 @@
     margin: 0;
 }
 
-
-
 #content{
   overflow-y: scroll;
   overflow-x: hidden;
@@ -23,6 +21,11 @@
     grid-template-rows: repeat(6, 1fr);
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 
 #intro{
     background-image: url('../pictures/background.jpg');
@@ -40,6 +43,8 @@
     position: fixed;
     z-index: 999;
 }
+
+
 
 @keyframes hide {
     0% {opacity: 1; visibility: visible;}
@@ -101,6 +106,10 @@
 }
 
 .invert-text{
+    color: white !important;
+}
+
+.invert-text a{
     color: white !important;
 }
 
@@ -448,3 +457,99 @@ p{
     border-top: 1px solid white;
     border-left: 1px solid white;
 }
+
+
+/* - - - - ABOUT SECTION - - - - */
+
+
+#about{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    text-align: center;
+}
+
+#about img{
+    width: 125px;
+    height: 125px;
+}
+
+#about-MMI{
+    grid-row: 2;
+    grid-column: 2;
+    margin: 15px;
+    transform: translateY(-5vh);
+}
+
+#about-GASSIE{
+    grid-row: 2;
+    grid-column: 3;
+    margin: 15px;
+    transform: translateY(-5vh);
+
+}
+
+#about-INCIA{
+    grid-row: 2;
+    grid-column: 4;
+    margin: 15px;
+    transform: translateY(-5vh);
+}
+
+#team{
+    grid-row: 3;
+    grid-column: 2 / 5;
+    display: flex;
+    border: 10px solid #80DBDB;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#team p{
+    margin: 0 auto;
+    z-index: 3;
+}
+
+#whiteRect1{
+    grid-row: 3;
+    grid-column: 2 / 4;
+    width: 140%;
+    height: 70px;
+    background-color: white;
+}
+
+#whiteRect2{
+    grid-row: 3;
+    grid-column: 2 / 4;
+    position: relative;
+    width: 140%;
+    height: 70px;
+    background-color: white;
+    left: 10%;
+    top: 25%;
+}
+
+#hl5::before{
+    content: "DUT MMI";
+    left: 15px;
+    top: 10px;
+}
+
+#hl6::before{
+    content: "Tour de Gassie";
+    left: 0px;
+    top: 13px;
+}
+
+
+#hl7::before{
+    content: "INCIA";
+    left: -15px;
+    top: 5px;
+}
+
