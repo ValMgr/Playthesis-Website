@@ -1,21 +1,14 @@
+/* 
+ * Playthesis ©
+ * Author: Valentin Magry - 2020
+ * MMI Bordeaux
+ */
+
 var page = document.getElementById('content');
 
 page.addEventListener('scroll', function() {
   
-  if(page.scrollTop < window.innerHeight/2){
-    WhiteText();
-    $('#mute').show();
-  }
-  else if(page.scrollTop > window.innerHeight*4.5 && page.scrollTop < window.innerHeight*5.5){
-    WhiteText();
-    $('#title').hide();
-  }
-  else{
-    BlackText();
-    $('#mute').hide();
-  }
-
-  UpdateNavbar();
+   UpdateNavbar();
 
 });
 
@@ -52,76 +45,85 @@ function UpdateNavbar(){
   var height5 = height4 + $("#our-games").height(); // #our-games height
   var height6 = height5 + $("#about").height(); // #about height
   // var height7 = height6 + $("#contact").height(); // #contact height
-  var transition = height0 / 2;
+  var halfHeight = height0 / 2;
 
-  if(page.scrollTop < height0 - transition){
+  if(page.scrollTop < height0 - halfHeight){
      if($(".selected") != $(".dots")[0]){
           $(".selected").removeClass("selected");
           $(".dots:eq(0)").addClass("selected");
           $("#current-position").html("ACCUEIL");
+          WhiteText();
+          $('#mute').show();
      }
   }
 
-  if(page.scrollTop > height0 -transition && page.scrollTop < height1 -transition){
+  if(page.scrollTop > height0 -halfHeight && page.scrollTop < height1 -halfHeight){
       if($(".selected") != $(".dots")[1]){
            $(".selected").removeClass("selected");
            $(".dots:eq(1)").addClass("selected");
            $("#current-position").html("CONCEPT");
-
+           BlackText();
+           $('#mute').hide();
       }
    }
 
-   if(page.scrollTop > height1 -transition && page.scrollTop < height2 -transition){
+   if(page.scrollTop > height1 -halfHeight && page.scrollTop < height2 -halfHeight){
       if($(".selected") != $(".dots")[2]){
            $(".selected").removeClass("selected");
            $(".dots:eq(2)").addClass("selected");
            $("#current-position").html("SOLUTION");
-
+           BlackText();
+           $('#mute').hide();
       }
    }
 
-   if(page.scrollTop > height2 -transition && page.scrollTop < height3 -transition){
+   if(page.scrollTop > height2 -halfHeight && page.scrollTop < height3 -halfHeight){
     if($(".selected") != $(".dots")[3]){
            $(".selected").removeClass("selected");
            $(".dots:eq(3)").addClass("selected");
            $("#current-position").html("POURQUOI NOUS");
-
+           BlackText();
+           $('#mute').hide();
       }
    }
  
-   if(page.scrollTop > height3 -transition && page.scrollTop < height4 -transition){
+   if(page.scrollTop > height3 -halfHeight && page.scrollTop < height4 -halfHeight){
     if($(".selected") != $(".dots")[4]){
            $(".selected").removeClass("selected");
            $(".dots:eq(4)").addClass("selected");
            $("#current-position").html("POURQUOI NOUS");
-
+           BlackText();
+           $('#mute').hide();
       }
    }
    
-   if(page.scrollTop > height4 -transition && page.scrollTop < height5 -transition){
+   if(page.scrollTop > height4 -halfHeight && page.scrollTop < height5 -halfHeight){
     if($(".selected") != $(".dots")[5]){
            $(".selected").removeClass("selected");
            $(".dots:eq(5)").addClass("selected");
            $("#current-position").html("NOS JEUX");
-
+           WhiteText();
+           $('#title').hide();
       }
    }
    
-   if(page.scrollTop > height5 -transition && page.scrollTop < height6 -transition){
+   if(page.scrollTop > height5 -halfHeight && page.scrollTop < height6 -halfHeight){
     if($(".selected") != $(".dots")[6]){
            $(".selected").removeClass("selected");
            $(".dots:eq(6)").addClass("selected");
            $("#current-position").html("À PROPOS");
-
+           BlackText();
+           $('#mute').hide();
       }
    }
    
-   if(page.scrollTop > height6 -transition){
+   if(page.scrollTop > height6 -halfHeight){
     if($(".selected") != $(".dots")[7]){
            $(".selected").removeClass("selected");
            $(".dots:eq(7)").addClass("selected");
            $("#current-position").html("CONTACT");
-
+           BlackText();
+           $('#mute').hide();
       }
    }
 }

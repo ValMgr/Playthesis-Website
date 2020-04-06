@@ -1,3 +1,9 @@
+/* 
+ * Playthesis ©
+ * Author: Valentin Magry - 2020
+ * MMI Bordeaux
+ */
+
 
 *{
     margin: 0;
@@ -316,7 +322,7 @@ p{
     position: relative;
 }
 
-.hightlight::before{
+.hightlight::after{
    content: "";
    color: transparent;
    background-color: #80DBDB;
@@ -325,31 +331,31 @@ p{
    z-index: -1;
 }
 
-#hl1::before{
+#hl1::after{
     content: "Mini jeux";
     left: -20px;
     top: 10px;
 }
 
-#hl2::before{
+#hl2::after{
     content: "Interface";
     left: 20px;
     top: 10px;
 }
 
-#hl3::before{
+#hl3::after{
     content: "electromyographique";
-    left: 50px;
+    left: 30px;
     top: 10px;
 }
 
-#hl4::before{
+#hl4::after{
     content: "où";
     left: -10px;
     top: -5px;
 }
 
-#hl5::before{
+#hl5::after{
     content: "quand";
     left: -5px;
     top: 10px;
@@ -752,20 +758,20 @@ p{
     top: 25%;
 }
 
-#hl5::before{
+#hl6::after{
     content: "DUT MMI";
     left: 15px;
     top: 10px;
 }
 
-#hl6::before{
+#hl7::after{
     content: "Tour de Gassie";
     left: 0px;
     top: 13px;
 }
 
 
-#hl7::before{
+#hl8::after{
     content: "INCIA";
     left: -15px;
     top: 5px;
@@ -789,17 +795,18 @@ p{
     top: 15%;
 }
 
-#horizontal-hightlight{
+
+/* #horizontal-hightlight{
     display: block;
     background-color: #80DBDB;
     height: 40px;
     width: 25%;
     position: relative;
-    top: -49%;
+    top: 180px;
     left: 55%;
     z-index: -1;
 
-}
+} */
 
 .form-input{
     display: flex;
@@ -816,6 +823,23 @@ p{
     padding: 15px;
     font-family: 'GothamBook';
     font-size: 15px;
+}
+
+textarea{
+    width: 600px;
+    height: 200px;
+}
+
+#vertical-hightlight::after{
+    content: "";
+    background-color: #80DBDB;
+    width: 300px;
+    height: 40px;
+    display: block;
+    position: relative;
+    left: 400px;
+    top: 385px;
+
 }
 
 #submit{
@@ -845,6 +869,12 @@ footer{
 
 #contact{
     position: relative;
+}
+
+/* - - - GAME PRODUCT - - - */
+
+#gameProduct{
+    background-color: #242424;
 }
 
 /* - - - ANIMATION - - - */

@@ -21,20 +21,20 @@
 
         <div class="desktop-nav">
             <!-- <img src="Assets/pictures/gif logo.gif" id="logo-gif"> -->
-            <h1 id="title" class="invert-text"><a href="index.html">PLAYTHESIS</a></h1>
+            <h1 id="title"><a href="index.html">PLAYTHESIS</a></h1>
     
             <nav id="left-nav">
-                <p id="current-position" class="invert-text">ACCUEIL</p>
+                <p id="current-position">ACCUEIL</p>
         
                 <div id="nav-dots">
-                    <a class="dots invert-dots selected" onclick="ScrollTo('intro')"></a>
-                    <a class="dots invert-dots" onclick="ScrollTo('concept')"></a>
-                    <a class="dots invert-dots" onclick="ScrollTo('solution')"></a>
-                    <a class="dots invert-dots" onclick="ScrollTo('why')"></a>
-                    <a class="dots invert-dots" onclick="ScrollTo('why2')"></a>
-                    <a class="dots invert-dots" onclick="ScrollTo('our-games')"></a>
-                    <a class="dots invert-dots" onclick="ScrollTo('about')"></a>
-                    <a class="dots invert-dots" onclick="ScrollTo('contact')"></a>
+                    <a class="dots" onclick="ScrollTo('intro')"></a>
+                    <a class="dots" onclick="ScrollTo('concept')"></a>
+                    <a class="dots" onclick="ScrollTo('solution')"></a>
+                    <a class="dots" onclick="ScrollTo('why')"></a>
+                    <a class="dots" onclick="ScrollTo('why2')"></a>
+                    <a class="dots" onclick="ScrollTo('our-games')"></a>
+                    <a class="dots" onclick="ScrollTo('about')"></a>
+                    <a class="dots" onclick="ScrollTo('contact')"></a>
 
                 </div>
             
@@ -201,7 +201,7 @@
 
         <div class="games" id="game1"></div>
         <div class="games" id="game2">
-            <a href="Seïko.html">
+            <a href="Games/Seïko.html">
                 <img src="Assets/pictures/Games/Seiko/Seiko.png">
                 <img class="gameTitle" src="Assets/pictures/Games/Seiko/logo.png">
             </a>
@@ -218,17 +218,17 @@
 
             <div id="about-MMI">
                 <img src="Assets/pictures/icons/team.png">
-                <p><span class="hightlight" id="hl5">DUT MMI</span> à l’Université Michel Montaigne, Bordeaux - étudiants de 1ère et 2ème année.</p>
+                <p><span class="hightlight" id="hl6">DUT MMI</span> à l’Université Michel Montaigne, Bordeaux - étudiants de 1ère et 2ème année.</p>
             </div>
     
             <div id="about-GASSIE">
                 <img src="Assets/pictures/icons/doctor.png">
-                <p>Chef de service des amputés à la <span class="hightlight" id="hl6">Tour de Gassie</span>, Bordeaux - Rémi Klotz.</p>
+                <p>Chef de service des amputés à la <span class="hightlight" id="hl7">Tour de Gassie</span>, Bordeaux - Rémi Klotz.</p>
             </div>
     
             <div id="about-INCIA">
                 <img src="Assets/pictures/icons/research (1).png">
-                <p><span class="hightlight" id="hl7">INCIA</span>, Bordeaux - Christophe Halgand et Nicholas Journet, LaBri - Matthieu Guémann.</p>
+                <p><span class="hightlight" id="hl8">INCIA</span>, Bordeaux - Christophe Halgand et Nicholas Journet, LaBri - Matthieu Guémann.</p>
             </div>
     
             <div id="team">
@@ -244,16 +244,16 @@
 
             <form action="mail.php" method="POST" class="contact-form">
                 <span id="vertical-hightlight"></span>
+                <span id="horizontal-hightlight"></span>
 
                 <div class="form-input">
                     <input type="text" name="name" id="name" required placeholder="Nom">
                     <input type="text" name="email" id="email" required placeholder="Email">
 
-                    <textarea type="text" rows="10" cols="30" required placeholder="Message"></textarea>
+                    <textarea type="text" required placeholder="Message"></textarea>
 
                     <input type="submit" name="submit" id="submit" value="ENVOYER">
                 </div>
-                <span id="horizontal-hightlight"></span>
 
             </form>
 
@@ -283,6 +283,7 @@
 
 <script>
     new WOW().init();
+    UpdateNavbar();
 </script>
 
 </html>
