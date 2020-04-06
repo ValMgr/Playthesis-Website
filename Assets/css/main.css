@@ -81,7 +81,8 @@ a{
     font-size: 50px;
     color: rgb(0, 0, 0);
     position: fixed;
-    margin: .75em;
+    top: 40px;
+    left: 50px;
 }
 
 #right-nav{
