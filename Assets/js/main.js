@@ -1,51 +1,21 @@
 var page = document.getElementById('content');
-console.log(window.innerHeight)
 
 page.addEventListener('scroll', function() {
-  var dots = document.getElementsByClassName('dots');
-  var rightLinks = document.getElementById('right-nav').children;
   
   if(page.scrollTop < window.innerHeight/2){
-    document.getElementById('current-position').classList.add('invert-text')
-    document.getElementById('title').classList.add('invert-text')
-    rightLinks[0].classList.add('invert-bouton')
-
-    for(i=1;i<rightLinks.length;i++){
-      rightLinks[i].classList.add('invert-text')
-    }
-
-    for(i=0;i<dots.length;i++){
-      dots[i].classList.add('invert-dots');
-    }
+    WhiteText();
+    $('#mute').show();
   }
-  else if(page.scrollTop > window.innerHeight*4.5){
-    document.getElementById('current-position').classList.add('invert-text')
-    document.getElementById('title').style.visibility = 'hidden';
-    rightLinks[0].classList.add('invert-bouton')
-
-    for(i=1;i<rightLinks.length;i++){
-      rightLinks[i].classList.add('invert-text')
-    }
-
-    for(i=0;i<dots.length;i++){
-      dots[i].classList.add('invert-dots');
-    }
+  else if(page.scrollTop > window.innerHeight*4.5 && page.scrollTop < window.innerHeight*5.5){
+    WhiteText();
+    $('#title').hide();
   }
   else{
-    document.getElementById('current-position').classList.remove('invert-text')
-    document.getElementById('title').classList.remove('invert-text')
-    document.getElementById('title').style.visibility = 'visible';
-    rightLinks[0].classList.remove('invert-bouton')
-
-    for(i=0;i<dots.length;i++){
-      dots[i].classList.remove('invert-dots');
-    }
-    for(i=1;i<rightLinks.length;i++){
-      rightLinks[i].classList.remove('invert-text')
-    }
+    BlackText();
+    $('#mute').hide();
   }
 
-  UpdateScroll();
+  UpdateNavbar();
 
 });
 
@@ -58,56 +28,102 @@ function ScrollTo(section){
   });
 }
 
-function UpdateScroll(){
+function WhiteText(){
+  $('#current-position').addClass('invert-text');
+  $('#title').show().addClass('invert-text');
+  $('#connect').addClass('invert-bouton');
+  $('.dots').addClass('invert-dots')
+}
 
-  var dots = document.getElementsByClassName('dots');
+function BlackText(){
+  $('#current-position').removeClass('invert-text');
+  $('#title').show().removeClass('invert-text');
+  $('#connect').removeClass('invert-bouton');
+  $('.dots').removeClass('invert-dots')
+}
 
-  for(i=0;i<dots.length;i++){
-    dots[i].classList.remove('selected');
+function UpdateNavbar(){
+
+  var height0 = $("#intro").height() // #intro height
+  var height1 = height0 + $("#concept").height(); // #concept height
+  var height2 = height1 + $("#solution").height(); // #solution height
+  var height3 = height2 + $("#why").height(); // #why height
+  var height4 = height3 + $("#why2").height(); // #why2 height
+  var height5 = height4 + $("#our-games").height(); // #our-games height
+  var height6 = height5 + $("#about").height(); // #about height
+  // var height7 = height6 + $("#contact").height(); // #contact height
+  var transition = height0 / 2;
+
+  if(page.scrollTop < height0 - transition){
+     if($(".selected") != $(".dots")[0]){
+          $(".selected").removeClass("selected");
+          $(".dots:eq(0)").addClass("selected");
+          $("#current-position").html("ACCUEIL");
+     }
   }
 
+  if(page.scrollTop > height0 -transition && page.scrollTop < height1 -transition){
+      if($(".selected") != $(".dots")[1]){
+           $(".selected").removeClass("selected");
+           $(".dots:eq(1)").addClass("selected");
+           $("#current-position").html("CONCEPT");
 
+      }
+   }
 
-  switch (page.scrollTop) {
-    case 0:
-      document.getElementById('current-position').innerHTML = "ACCUEIL";
-      dots[0].classList.add('selected');
+   if(page.scrollTop > height1 -transition && page.scrollTop < height2 -transition){
+      if($(".selected") != $(".dots")[2]){
+           $(".selected").removeClass("selected");
+           $(".dots:eq(2)").addClass("selected");
+           $("#current-position").html("SOLUTION");
 
-      break;
+      }
+   }
 
-    case window.innerHeight:
-      document.getElementById('current-position').innerHTML = "LE CONCEPT";
-      dots[1].classList.add('selected');
+   if(page.scrollTop > height2 -transition && page.scrollTop < height3 -transition){
+    if($(".selected") != $(".dots")[3]){
+           $(".selected").removeClass("selected");
+           $(".dots:eq(3)").addClass("selected");
+           $("#current-position").html("POURQUOI NOUS");
 
-      break;
+      }
+   }
+ 
+   if(page.scrollTop > height3 -transition && page.scrollTop < height4 -transition){
+    if($(".selected") != $(".dots")[4]){
+           $(".selected").removeClass("selected");
+           $(".dots:eq(4)").addClass("selected");
+           $("#current-position").html("POURQUOI NOUS");
 
-    case window.innerHeight *2:
-      document.getElementById('current-position').innerHTML = "NOTRE SOLUTION";
-      dots[2].classList.add('selected');
+      }
+   }
+   
+   if(page.scrollTop > height4 -transition && page.scrollTop < height5 -transition){
+    if($(".selected") != $(".dots")[5]){
+           $(".selected").removeClass("selected");
+           $(".dots:eq(5)").addClass("selected");
+           $("#current-position").html("NOS JEUX");
 
-      break;
+      }
+   }
+   
+   if(page.scrollTop > height5 -transition && page.scrollTop < height6 -transition){
+    if($(".selected") != $(".dots")[6]){
+           $(".selected").removeClass("selected");
+           $(".dots:eq(6)").addClass("selected");
+           $("#current-position").html("À PROPOS");
 
-    case window.innerHeight*3:
-      document.getElementById('current-position').innerHTML = "POURQUOI NOUS";
-      dots[3].classList.add('selected');
+      }
+   }
+   
+   if(page.scrollTop > height6 -transition){
+    if($(".selected") != $(".dots")[7]){
+           $(".selected").removeClass("selected");
+           $(".dots:eq(7)").addClass("selected");
+           $("#current-position").html("CONTACT");
 
-      break;
-
-    case window.innerHeight*4:
-      document.getElementById('current-position').innerHTML = "POURQUOI NOUS";
-      dots[4].classList.add('selected');
-
-      break;
-
-    case window.innerHeight*5:
-      document.getElementById('current-position').innerHTML = "NOS JEUX";
-      dots[5].classList.add('selected');
-
-      break;
-  
-    default:
-      break;
-  }
+      }
+   }
 }
 
 

@@ -4,45 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="Playthesis a pour but de rééduquer le biceps et le triceps avant appareillage de prothèse myoélectrique. À travers des mini-jeux étudiés pour vous faire travailler en douceur, et dans la bonne humeur, apprenez à maîtriser la force, et la précision de vos contractions musculaires. " />
-    <meta name="keywords" content="myoélectrique, myoarm, technologie, amputation, jeux vidéo, unity, handicap, accessibilité, Bordeaux, MMI, INCIA, tour de Gassie, Playthesis, prothèse, contact" />
+    <meta name="keywords" content="myoélectrique, myoarm, technologie, amputation, jeux vidéo, unity, handicap, accessibilité, Bordeaux, MMI, INCIA, tour de Gassie, Playthesis, prothèse, contact, play thesis, prosthesis" />
     <title>Playthesis</title>
     <link rel="shortcut icon" href="Assets/pictures/favicon.ico" type="image/x-icon">
     <link rel="icon" href="Assets/pictures/favicon2.png" type="image/png">
-    <link rel="stylesheet" href="Assets/css/font.css">
-    <link rel="stylesheet" href="Assets/css/main.css">
-
+    <link rel="stylesheet" media="screen" href="Assets/css/font.css">
+    <link rel="stylesheet" media="screen" href="Assets/css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="Assets/css/responsive.css">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css">
 </head>
 <body>
 
     <div class="fixed-element">
-        <img src="Assets/pictures/gif logo.gif" id="logo-gif">
+       
 
-        <h1 id="title" class="invert-text"><a href="index.html">PLAYTHESIS</a></h1>
 
-        <nav id="left-nav">
-            <p id="current-position" class="invert-text">ACCUEIL</p>
+        <div class="desktop-nav">
+            <!-- <img src="Assets/pictures/gif logo.gif" id="logo-gif"> -->
+            <h1 id="title" class="invert-text"><a href="index.html">PLAYTHESIS</a></h1>
     
-            <div id="nav-dots">
-                <a class="dots invert-dots selected" onclick="ScrollTo('intro')"></a>
-                <a class="dots invert-dots" onclick="ScrollTo('concept')"></a>
-                <a class="dots invert-dots" onclick="ScrollTo('solution')"></a>
-                <a class="dots invert-dots" onclick="ScrollTo('why')"></a>
-                <a class="dots invert-dots" onclick="ScrollTo('why2')"></a>
-                <a class="dots invert-dots" onclick="ScrollTo('our-games')"></a>
-            </div>
+            <nav id="left-nav">
+                <p id="current-position" class="invert-text">ACCUEIL</p>
         
-        </nav>
+                <div id="nav-dots">
+                    <a class="dots invert-dots selected" onclick="ScrollTo('intro')"></a>
+                    <a class="dots invert-dots" onclick="ScrollTo('concept')"></a>
+                    <a class="dots invert-dots" onclick="ScrollTo('solution')"></a>
+                    <a class="dots invert-dots" onclick="ScrollTo('why')"></a>
+                    <a class="dots invert-dots" onclick="ScrollTo('why2')"></a>
+                    <a class="dots invert-dots" onclick="ScrollTo('our-games')"></a>
+                    <a class="dots invert-dots" onclick="ScrollTo('about')"></a>
+                    <a class="dots invert-dots" onclick="ScrollTo('contact')"></a>
 
-        <nav id="right-nav">
+                </div>
+            
+            </nav>
+    
+            <nav id="right-nav">
+    
+                <a class="bouton invert-bouton" id="connect" style="display: none;">Connexion</a>
+                <a class="invert-text" id="mute" onclick="muteSound()"><img id="mute-btn" src="Assets/pictures/icons/mute.png"></a>
+    
+    
+            </nav>
+        </div>
 
-            <a class="bouton invert-bouton">Connexion</a>
-            <a class="invert-text" href="about.html">A propos</a>
-            <a class="invert-text" href="contact.html">Contact</a>
-            <a class="invert-text" id="mute" onclick="muteSound()"><img id="mute-btn" src="Assets/pictures/icons/mute.png"></a>
-
-
-        </nav>
-
+        <div class="mobile-nav">
+            <nav>
+                <div class="burger">
+                    <input type="checkbox" />
+            
+                    <div class="nav-span">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+               
+            </nav>
+        </div>
+        
     </div>
 
     <div id="content">
@@ -193,6 +214,60 @@
 
         </section>
 
+        <section id="about">
+
+            <div id="about-MMI">
+                <img src="Assets/pictures/icons/team.png">
+                <p><span class="hightlight" id="hl5">DUT MMI</span> à l’Université Michel Montaigne, Bordeaux - étudiants de 1ère et 2ème année.</p>
+            </div>
+    
+            <div id="about-GASSIE">
+                <img src="Assets/pictures/icons/doctor.png">
+                <p>Chef de service des amputés à la <span class="hightlight" id="hl6">Tour de Gassie</span>, Bordeaux - Rémi Klotz.</p>
+            </div>
+    
+            <div id="about-INCIA">
+                <img src="Assets/pictures/icons/research (1).png">
+                <p><span class="hightlight" id="hl7">INCIA</span>, Bordeaux - Christophe Halgand et Nicholas Journet, LaBri - Matthieu Guémann.</p>
+            </div>
+    
+            <div id="team">
+                <p>Antoine Aupy - Maxime Freund - Valentin Magry - Tracy Ng Sing Kwong - Lottie Rocuet - Mathis Vincendeau - Paulin Jouhet - Mathieu Delepine - Justine Magry - Yoann Bouquey - Flora Moreau </p>
+            </div>
+    
+            <div id="whiteRect1"></div>
+            <div id="whiteRect2"></div>
+
+        </section>
+
+        <section id="contact">
+
+            <form action="mail.php" method="POST" class="contact-form">
+                <span id="vertical-hightlight"></span>
+
+                <div class="form-input">
+                    <input type="text" name="name" id="name" required placeholder="Nom">
+                    <input type="text" name="email" id="email" required placeholder="Email">
+
+                    <textarea type="text" rows="10" cols="30" required placeholder="Message"></textarea>
+
+                    <input type="submit" name="submit" id="submit" value="ENVOYER">
+                </div>
+                <span id="horizontal-hightlight"></span>
+
+            </form>
+
+            <footer>
+                <a class="footer-el" href="#">Mention légales</a>
+                <p class="footer-el">Playthesis &copy</p>
+                <a class="footer-el" href="mailto:playthesis.fr@gmail.com">playthesis.fr@gmail.com</a>
+            </footer>
+
+        </section>
+
+
+
+
     </div>
 
  
@@ -202,6 +277,12 @@
     
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 <script src="Assets/js/main.js"></script>
+
+<script>
+    new WOW().init();
+</script>
 
 </html>

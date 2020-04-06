@@ -122,9 +122,9 @@ a{
 
 #left-nav{
     position: fixed;
-    top: 50vh;
+    top: 45vh;
     z-index: 10;
-    left: 15px;
+    left: 0;
     width: 100px;
 }
 
@@ -192,7 +192,7 @@ a{
 p{
     font-family: 'GothamBook';
     font-size: 20px;
-    line-height: 1;
+    line-height: 1.2em;
 }
 
 
@@ -204,6 +204,7 @@ p{
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     grid-row: 2 / 4;
+    left: 8vw;
     -webkit-transform: translateX(8vw);
         -ms-transform: translateX(8vw);
             transform: translateX(8vw);
@@ -253,7 +254,7 @@ p{
 .number span{
     font-size: 70px;
     font-weight: bold;
-    font-family: Roboto;
+    font-family: 'Roboto' sans-serif;
 }
 
 #concept1{
@@ -653,8 +654,8 @@ p{
     height: 100vh;
     display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
 
     text-align: center;
 }
@@ -768,3 +769,103 @@ p{
     left: -15px;
     top: 5px;
 }
+
+
+/* - - - CONTACT - - - */
+
+#contact form{
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+}
+
+#vertical-hightlight{
+    display: block;
+    background-color: #80DBDB;
+    height: 50%;
+    width: 40px;
+    position: relative;
+    left: 25%;
+    top: 15%;
+}
+
+#horizontal-hightlight{
+    display: block;
+    background-color: #80DBDB;
+    height: 40px;
+    width: 25%;
+    position: relative;
+    top: -49%;
+    left: 55%;
+    z-index: -1;
+
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 26%;
+    top: -30%;
+    width: 50%;
+}
+
+.form-input input,
+.form-input textarea{
+    margin-bottom: 25px;
+    padding: 15px;
+    font-family: 'GothamBook';
+    font-size: 15px;
+}
+
+#submit{
+    width: 33.3%;
+    position: relative;
+    left: 66.7%;
+    border: none;
+    background-color: #80DBDB;
+    font-family: 'Gotham';
+    font-size: 20px;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-el{
+    margin: 0 auto;
+    font-family: 'GothamBook';
+    text-decoration: underline;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#contact{
+    position: relative;
+}
+
+/* - - - ANIMATION - - - */
+
+.slideUp{
+    animation: slideUp 1s ease forwards;
+}
+
+@keyframes slideUp{
+    0%{ opacity: 0; transform: translateY(-20%);}
+    100%{ opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUpNumber{
+    0%{ opacity: 0; transform: translate(8vw, -20%);}
+    100%{ opacity: 1; transform: translate(8vw, 0);}
+}
+
+/* - - - HIDE MOBILE CONTENT - - - */
+
+.mobile-nav{
+    display: none;
+}
+
+
