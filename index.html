@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Playthesis a pour but de rééduquer le biceps et le triceps avant appareillage de prothèse myoélectrique. À travers des mini-jeux étudiés pour vous faire travailler en douceur, et dans la bonne humeur, apprenez à maîtriser la force, et la précision de vos contractions musculaires. " />
+    <meta name="keywords" content="myoélectrique, myoarm, technologie, amputation, jeux vidéo, unity, handicap, accessibilité, Bordeaux, MMI, INCIA, tour de Gassie, Playthesis, prothèse, contact" />
+    <title>Playthesis</title>
+    <link rel="shortcut icon" href="Assets/pictures/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="Assets/pictures/favicon2.png" type="image/png">
+    <link rel="stylesheet" href="Assets/css/font.css">
+    <link rel="stylesheet" href="Assets/css/main.css">
+
+</head>
+<body>
+
+    <div class="fixed-element">
+        <img src="Assets/pictures/gif logo.gif" id="logo-gif">
+
+        <h1 id="title" class="invert-text"><a href="index.html">PLAYTHESIS</a></h1>
+
+        <nav id="left-nav">
+            <p id="current-position" class="invert-text">ACCUEIL</p>
+    
+            <div id="nav-dots">
+                <a class="dots invert-dots selected" onclick="ScrollTo('intro')"></a>
+                <a class="dots invert-dots" onclick="ScrollTo('concept')"></a>
+                <a class="dots invert-dots" onclick="ScrollTo('solution')"></a>
+                <a class="dots invert-dots" onclick="ScrollTo('why')"></a>
+                <a class="dots invert-dots" onclick="ScrollTo('why2')"></a>
+                <a class="dots invert-dots" onclick="ScrollTo('our-games')"></a>
+            </div>
+        
+        </nav>
+
+        <nav id="right-nav">
+
+            <a class="bouton invert-bouton">Connexion</a>
+            <a class="invert-text" href="about.html">A propos</a>
+            <a class="invert-text" href="contact.html">Contact</a>
+            <a class="invert-text" id="mute" onclick="muteSound()"><img id="mute-btn" src="Assets/pictures/icons/mute.png"></a>
+
+
+        </nav>
+
+    </div>
+
+    <div id="content">
+
+        <section id="intro">     
+            <video autoplay muted loop id="myVideo">
+                <source src="Assets/video/Video1.mp4" type="video/mp4">
+        </video>       
+        </section>
+
+        <section id="concept">
+
+            <div id="number1">
+                <img src="Assets/pictures/Ellipse 6.svg">
+                <p class="number"><span>5000</span><br> Nouveaux amputés par an</p>
+            </div>
+         
+            <div id="number2">
+                <img src="Assets/pictures/Ellipse 6.svg">
+                <p class="number">dont <span>5%</span><br> du membre supérieur</p>
+            </div>
+
+
+            <p id="concept1">Aujourd’hui, les délais de rééducation 
+                avant appareillage de prothèse 
+                myoélectrique demandent du temps et 
+                beaucoup d’énergie de la part du patient 
+                et des médecins.</p>
+
+            <p id="concept2">Avec l’aide de professionnels de santé et 
+                chercheurs, nous en sommes venus à 
+                trouver une solution qui permettrait de 
+                délocaliser une partie de la rééducation au 
+                domicile du patient.</p>
+
+            <p id="concept3">Dans les transports, chez vous, partout où 
+                que vous alliez, Playthesis vous 
+                accompagne avant votre appareillage et 
+                dédramatise la rééducation en la rendant 
+                ludique.</p>
+
+        </section>
+
+        <section id="solution">
+
+            <div id="solution1">
+                <img src="Assets/pictures/icons/touch-screen.png">
+                <p><span class="hightlight" id="hl1">Mini jeux</span> conçus et réalisés 
+                    entièrement par nos soins.</p>
+                </span>
+            </div>
+
+            <div id="solution2">
+                <img src="Assets/pictures/icons/results.png">
+                <p><span class="hightlight" id="hl2">Interface</span> patient - 
+                    professionnels de santé.</p>
+            </div>
+
+            <div id="solution3">
+                <img src="Assets/pictures/icons/bracelet.png">
+                <p>Un bracelet à capteurs 
+                    <span class="hightlight" id="hl3">électromyographiques</span>.</p>
+            </div>
+
+            <div id="solution4">
+                <img src="Assets/pictures/icons/app.png">
+                <p>Des jeux <span class="hightlight" id="hl4">où</span> vous voulez, 
+                    <span class="hightlight" id="hl5">quand</span> vous voulez.</p>
+            </div>
+
+        </section>
+
+        <section id="why">
+
+            <div class="frame">
+                <img src="Assets/pictures/bracelet.jpg" id="halfpic">
+                <p id="explain"><span>En tant que patient</span> <br><br>
+
+                    Ce projet est né d’un constat. La rééducation 
+                    avant appareillage coûte cher, prend beaucoup 
+                    de temps et d’énergie. Nous avons décidé de 
+                    faciliter tout ce processus. <br><br>
+                    
+                    À travers des mini-jeux étudiés pour vous faire 
+                    travailler en douceur, apprenez à maîtriser la 
+                    force et la précision de vos contractions 
+                    musculaires. Équipé d’un bracelet à électrode 
+                    pour capter chacune de vos contractions, 
+                    rééduquer ses muscles n’a jamais été aussi 
+                    simple. </p>
+            </div>
+
+        </section>
+
+        <section id="why2">
+
+            <div class="frame">
+                <div id="pictos">
+                    <div class="picto" id="picto1">
+                            <img src="Assets/pictures/icons/time.png">
+                            <p>Un gain de temps</p>
+                    </div>
+
+                    <div class="picto" id="picto2">
+                        <img src="Assets/pictures/icons/select.png">
+                        <p>Un suivi plus précis</p>
+                    </div>
+
+                    <div class="picto" id="picto3">
+                        <img src="Assets/pictures/icons/enjoy.png">
+                        <p>Dédramatisation <br>
+                            de la situation d’handicap</p>
+                    </div>
+                </div>
+
+                <p id="explain2"><span>En tant que professionnel de santé</span> <br><br>
+
+                    Ayant constaté qu’il n’existe pas de solution 
+                    concrète minimisant la rééducation en France, 
+                    nous souhaitons permettre au plus grand 
+                    nombre d’accéder aux équipements nécessaires 
+                    afin d’alléger ce processus. <br><br>
+                    
+                    Notre équipe a travaillé main dans la main avec 
+                    des médecins et des chercheurs pour créer la 
+                    solution optimale. Testé en version bêta par des 
+                    patients, notre projet n’attends plus que vous 
+                    pour prendre vie. </p>
+
+            </div>
+
+        </section>
+
+        <section id="our-games">
+
+        <div class="games" id="game1"></div>
+        <div class="games" id="game2">
+            <a href="viewSeïko.html">
+                <img src="Assets/pictures/Games/Seiko/Seiko.png">
+                <img class="gameTitle" src="Assets/pictures/Games/Seiko/logo.png">
+            </a>
+        </div>
+        <div class="games" id="game3"></div>
+        <div class="games" id="game4"></div>
+        <div class="games" id="game5"></div>
+        <div class="games" id="game6"></div>
+        <div class="games" id="game7"></div>
+
+        </section>
+
+    </div>
+
+ 
+
+
+
+    
+</body>
+
+<script src="Assets/js/main.js"></script>
+
+</html>
