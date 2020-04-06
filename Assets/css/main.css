@@ -784,3 +784,37 @@ p{
     top: 20%;
     left: 33%;
 }
+
+/* - - - - contact section - - - - */
+
+#contact{
+    background-color: #F3F3F3;
+    height: 100vh;
+}
+
+.form-control{
+    font-family: 'GothamBook';
+    
+    color: #1A1F16;
+}
+.btn{
+    background-color: #80DBDB;
+    border: none;
+    color: #1A1F16;
+}
+.btn:hover{
+    background-color: #64B3B3;
+    border: none;
+}
+.btn:active{
+    background-color: #64B3B3;
+    border: none;
+}
+.form{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
