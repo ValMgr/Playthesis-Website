@@ -11,47 +11,43 @@
     <link rel="stylesheet" media="screen" href="Assets/css/font.css">
     <link rel="stylesheet" media="screen" href="Assets/css/main.css">
     <link rel="stylesheet" media="screen and (max-width: 640px)" href="Assets/css/responsive.css">
-    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css">
+    <!-- <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css"> pssst stay tuned -->
+
+    
+
 </head>
 <body>
 
     <div class="fixed-element">
-       
-
-
         <div class="desktop-nav">
             <!-- <img src="Assets/pictures/gif logo.gif" id="logo-gif"> -->
-            <h1 id="title"><a href="index.html">PLAYTHESIS</a></h1>
+            <h1 class="title"><a href="index.html">PLAYTHESIS</a></h1>
     
             <nav id="left-nav">
                 <p id="current-position">ACCUEIL</p>
         
                 <div id="nav-dots">
-                    <a class="dots" onclick="ScrollTo('intro')"></a>
-                    <a class="dots" onclick="ScrollTo('concept')"></a>
-                    <a class="dots" onclick="ScrollTo('solution')"></a>
-                    <a class="dots" onclick="ScrollTo('why')"></a>
-                    <a class="dots" onclick="ScrollTo('why2')"></a>
-                    <a class="dots" onclick="ScrollTo('our-games')"></a>
-                    <a class="dots" onclick="ScrollTo('about')"></a>
-                    <a class="dots" onclick="ScrollTo('contact')"></a>
-
-                </div>
-            
+                    <a class="dots" onclick="ScrollTo(0)"></a>
+                    <a class="dots" onclick="ScrollTo(1)"></a>
+                    <a class="dots" onclick="ScrollTo(2)"></a>
+                    <a class="dots" onclick="ScrollTo(3)"></a>
+                    <a class="dots" onclick="ScrollTo(4)"></a>
+                    <a class="dots" onclick="ScrollTo(5)"></a>
+                    <a class="dots" onclick="ScrollTo(6)"></a>
+                    <a class="dots" onclick="ScrollTo(7)"></a>
+                </div>       
             </nav>
     
             <nav id="right-nav">
-    
-                <a class="bouton invert-bouton" id="connect" style="display: none;">Connexion</a>
+                <a class="bouton connect" style="display: none;">Connexion</a>
                 <a class="invert-text" id="mute" onclick="muteSound()"><img id="mute-btn" src="Assets/pictures/icons/mute.png"></a>
-    
     
             </nav>
         </div>
 
         <div class="mobile-nav">
-            <nav>
-                <div class="burger">
+            <h1 class="title"><a href="index.html">PLAYTHESIS</a></h1>
+            <nav id="toggle" style="display: none;">
                     <input type="checkbox" />
             
                     <div class="nav-span">
@@ -59,19 +55,24 @@
                         <span></span>
                         <span></span>
                     </div>
+
+                <div id="menuToggle">
+                    <a class="invert-bouton connect">Connexion</a>
+                    <a href="index.html#about">À Propos</a>
+                    <a href="index.html#contact">Contact</a>
                 </div>
-               
             </nav>
         </div>
         
     </div>
 
-    <div id="content">
-
+    <!-- Content -->
         <section id="intro">     
-            <video autoplay muted loop id="myVideo">
-                <source src="Assets/video/Video1.mp4" type="video/mp4">
-        </video>       
+            <video autoplay muted loop id="video"
+            data-web-video="Assets/video/Video1.mp4"
+            data-mobile-video="Assets/video/video-mobile.mp4" type="video/mp4">
+            </video>
+
         </section>
 
         <section id="concept">
@@ -265,25 +266,20 @@
 
         </section>
 
-
-
-
-    </div>
-
- 
-
-
-
     
 </body>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<!-- <script src="Assets/js/custom_wowjs.js"></script>  doesnt work with snap scroll css property but ... comming soon :) -->
+<script src="Assets/js/scroll.js"></script>
 <script src="Assets/js/main.js"></script>
-
 <script>
-    new WOW().init();
     UpdateNavbar();
+    if($(window).width() < $(window).height()){
+        $('#video').attr("src", $('#video').attr("data-mobile-video"));
+    }
+    else{
+        $('#video').attr("src", $('#video').attr("data-web-video"));
+    }
 </script>
 
 </html>

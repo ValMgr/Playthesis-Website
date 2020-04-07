@@ -1,7 +1,9 @@
 /* 
  * Playthesis ©
- * Author: Valentin Magry - 2020
- * MMI Bordeaux
+ * Team: Playthesis 2020
+ * Developer: Valentin Magry
+ * Design: Tracy Ng - Justine Magry
+ * MMI Bordeaux - IUT Bordeaux Montaigne
  */
 
 .desktop-nav{
@@ -12,30 +14,77 @@
     display: block;
 }
 
-.burger input{
+.title{
+    left: 20px;
+    top: 20px;
+    font-size: 35px;
+    z-index: 5;
+}
+
+
+#menuToggle{
+    height: 100vh;
+    width: 50vw;
+    transform: translate(100vw, 0);
+    background-color: #242424;
+    position: fixed;
+    transition: transform 0.9s cubic-bezier(0.77,0.2,0.05,1.0);
+    text-align: center;
+    z-index: 8;
+}
+
+#toggle input:checked ~ #menuToggle{
+    transform: translate(50vw, 0);
+}
+
+#toggle input{
     cursor: pointer;
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     opacity: 0;
-    width: 35px;
-    height: 35px;
-    z-index: 2;
+    width: 40px;
+    height: 30px;
+    z-index: 10;
     -webkit-touch-callout: none;
 }
 
-.burger .nav-span{
+#menuToggle{
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    color: white;
+    font-family: 'Gotham';
+    align-items: center;
+}
+
+
+#menuToggle a{
+    width: 50%;
+    padding: 10px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#menuToggle .connect{
+    margin-bottom: 10px;
+}
+
+
+
+.nav-span{
     position: fixed;
     top: 20px;
-    left: 20px;
-    width: 35px;
-    height: 35px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    z-index: 9;
 }
 
 .nav-span span{
-    width: 35px;
-    height: 4px;
-    margin-bottom: 7px;
+    width: 40px;
+    height: 3px;
+    margin-bottom: 8px;
     background-color: black;
     display: block;
     border-radius: 15px;
@@ -43,23 +92,26 @@
     transition: .5s ease;
 }
 
-.burger input:checked ~ .nav-span span:nth-child(1){
+input:checked ~ .nav-span span:nth-child(1){
     opacity: 1;
-    transform: rotate(45deg);
-    width: 31px;
+    transform: rotate(45deg) translate(2px, -1px);
+    width: 32px;
+    background-color: white;
 }
 
-.burger input:checked ~ .nav-span span:nth-child(2){
+input:checked ~ .nav-span span:nth-child(2){
     opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-.burger input:checked ~ .nav-span span:nth-child(3){
+input:checked ~ .nav-span span:nth-child(3){
     opacity: 1;
-    transform: rotate(-45deg);
-    width: 31px;
+    transform: rotate(-45deg) translate(-1px, 1px);
+    width: 32px;
+    background-color: white;
 }
 
-#content section{
+section{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
@@ -70,3 +122,259 @@ p{
     line-height: 1;
 }
 
+.white-burger{
+    background-color: white !important;
+}
+
+section{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+/* - - - CONCEPT SECTION - - - */
+
+#concept{
+    height: 150vh;
+    grid-template-rows: repeat(10, 1fr);
+
+}
+ 
+#number1{
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+}
+
+#number2{
+    grid-column: 1 / 3;
+    grid-row: 5 / 7;
+}
+
+
+#concept1{
+    grid-column: 1 / 4;
+    grid-row: 9 / 10;
+    width: 80%;
+}
+
+#concept2{
+    grid-column: 1 / 4;
+    grid-row: 10 / 11;
+    width: 80%;
+
+}
+
+#concept3{
+    grid-column: 1 / 4;
+    grid-row: 11 / 12;
+    width: 80%;
+
+}
+
+/* - - - SOLUTION SECTION  - - - */
+
+#solution1{
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+    transform: translateX(10%);
+}
+
+#solution2{
+    grid-column: 1 / 4;
+    grid-row: 3 / 5;
+    transform: translateX(10%);
+}
+
+#solution3{
+    grid-column: 1 / 4;
+    grid-row: 4 / 6;
+    transform: translateX(10%);
+}
+
+#solution4{
+    grid-column: 1 / 4;
+    grid-row: 5 / 7;
+    transform: translateX(10%);
+}
+
+/* - - - POURQUOI NOUS 1 SECTION - - - */
+
+
+.frame{
+    grid-row: 1 / 7;
+    grid-column: 1 / 7;
+    position: relative;
+    color: white;
+    background-color: #000000;
+
+}
+
+#halfpic{
+    width: 100%;
+    float: none;
+    position: absolute;
+    opacity: .3;
+}
+
+#explain{
+    width: 80%;
+    top: 15%;
+}
+
+/* - - - POURQUOI NOUS 2 SECTION - - - */
+
+#why2 .frame{
+    background-color: white;
+    color: #242424;
+}
+
+#pictos{
+    display: none;
+}
+
+#explain2{
+    width: 80%;
+    float: none;
+    top: 15%;
+}
+
+/* - - - NOS JEUX - - - */
+
+#our-games{
+    height: 230vh !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(7, 1fr) !important;
+}
+
+#game1{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    border-right: none;
+}
+
+#game2{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    border-left: none;
+    border-right: none;
+}
+
+#game3{
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    border-left: none;
+}
+
+#game4{
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+}
+
+#game5{
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#game6{
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#game7{
+    grid-column: 1 / 4;
+    grid-row: 7 / 8;
+    border-top: none;
+    border-left: none;
+}
+
+/* - - - ABOUT SECTION - - - */
+
+#about{
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(6, 1fr) !important;
+
+}
+
+#about img{
+    display: none;
+}
+
+#about-MMI{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    transform: none;
+}
+
+#about-GASSIE{
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    transform: none;
+
+}
+
+#about-INCIA{
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+    transform: none;
+
+}
+
+#team{
+    grid-column: 1 / 4;
+    grid-row: 5 / 7;
+    width: 80%;
+    margin: 15px;
+}
+
+#whiteRect1{
+    grid-column: 1 / 3;
+    grid-row: 5 / 7;
+    width: 100%;
+}
+
+#whiteRect2{
+    grid-column: 1 / 4;
+    grid-row: 5 / 7;
+    width: 100%;
+    left: 15%;
+}
+
+/* - - - CONTACT - - - */
+
+#contact form{
+    grid-column: 1 / 4;
+    grid-row: 2 / 6;
+}
+
+#vertical-hightlight{
+    left: 3%;
+    top: 0;
+}
+
+.form-input{
+    left: 5%;
+    width: 80%;
+    top: -45%;
+}
+
+textarea{
+    width: 100%;
+}
+
+#submit{
+    left: 50%;
+    width: 50%;
+}
+
+.footer-el{
+    font-size: 11px;
+}

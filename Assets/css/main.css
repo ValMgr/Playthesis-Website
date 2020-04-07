@@ -1,7 +1,9 @@
 /* 
  * Playthesis ©
- * Author: Valentin Magry - 2020
- * MMI Bordeaux
+ * Team: Playthesis 2020
+ * Developer: Valentin Magry
+ * Design: Tracy Ng - Justine Magry
+ * MMI Bordeaux - IUT Bordeaux Montaigne
  */
 
 
@@ -9,21 +11,12 @@
     margin: 0;
 }
 
-#content{
-  overflow-y: scroll;
-  overflow-x: hidden;
-
-  height: 100vh;
-  -ms-scroll-snap-type: mandatory;
-      scroll-snap-type: mandatory;
-  -ms-scroll-snap-points-y: repeat(100vh);
-      scroll-snap-points-y: repeat(100vh);
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+body{
+    overflow-x: hidden;
 }
 
-#content section{
-    scroll-snap-align: start;
+
+ section{
     width: 100vw;
     height: 100vh;
     display: -ms-grid;
@@ -35,15 +28,11 @@
 
 a{
     text-decoration: none;
-    color: black;
+    color: #242424;
 }
 
 
 #intro{
-    background-image: url('../pictures/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -12vh;
     background-color: black;
 }
 
@@ -55,6 +44,7 @@ a{
     object-fit: cover;
 
 }
+
 
 #logo-gif{
     width: 100%;
@@ -81,14 +71,14 @@ a{
     100% {opacity: 0; visibility: hidden;}
 }
 
-#title{
+.title{
     font-family: 'Earth Orbiter';
     font-weight: normal;
     font-size: 50px;
-    color: rgb(0, 0, 0);
+    color: #242424;
     position: fixed;
     top: 40px;
-    left: 50px;
+    left: 40px;
 }
 
 #right-nav{
@@ -117,8 +107,8 @@ a{
 }
 
 .bouton{
-    border: 1px solid black;
-    color: black;
+    border: 1px solid #242424;
+    color: #242424;
 }
 
 .invert-bouton{
@@ -150,7 +140,7 @@ a{
 }
 
 .invert-dots{
-    background-color: black !important;
+    background-color: #242424 !important;
     border: 1px solid white !important;
 }
 
@@ -158,7 +148,7 @@ a{
     width: 10px;
     height: 10px;
     background-color: rgb(255, 255, 255);
-    border: solid 1px rgb(0, 0, 0);
+    border: solid 1px #242424;
     border-radius: 25px;
     display: block;
     margin: 10px auto;
@@ -270,7 +260,6 @@ p{
     grid-column: 4 / 6;
     -ms-grid-row: 3;
     grid-row: 3;
-    width: 60%;
     -webkit-transform: translate(10%, -20%);
         -ms-transform: translate(10%, -20%);
             transform: translate(10%, -20%);
