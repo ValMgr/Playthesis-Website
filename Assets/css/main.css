@@ -179,7 +179,7 @@ a{
 
 }
 
-#current-position{
+.current-position{
     font-family: 'Earth Orbiter';
     font-weight: normal;
     font-size: 22.5px;
@@ -893,33 +893,6 @@ footer{
 
 #gameProduct{
     background-color: #242424;
-}
-
-/* - - - ANIMATION - - - */
-
-.slideUp{
-    -webkit-animation: slideUp 1s ease forwards;
-            animation: slideUp 1s ease forwards;
-}
-
-@-webkit-keyframes slideUp{
-    0%{ opacity: 0; -webkit-transform: translateY(-20%); transform: translateY(-20%);}
-    100%{ opacity: 1; -webkit-transform: translateY(0); transform: translateY(0);}
-}
-
-@keyframes slideUp{
-    0%{ opacity: 0; -webkit-transform: translateY(-20%); transform: translateY(-20%);}
-    100%{ opacity: 1; -webkit-transform: translateY(0); transform: translateY(0);}
-}
-
-@-webkit-keyframes slideUpNumber{
-    0%{ opacity: 0; -webkit-transform: translate(8vw, -20%); transform: translate(8vw, -20%);}
-    100%{ opacity: 1; -webkit-transform: translate(8vw, 0); transform: translate(8vw, 0);}
-}
-
-@keyframes slideUpNumber{
-    0%{ opacity: 0; -webkit-transform: translate(8vw, -20%); transform: translate(8vw, -20%);}
-    100%{ opacity: 1; -webkit-transform: translate(8vw, 0); transform: translate(8vw, 0);}
 }
 
 /* - - - HIDE MOBILE CONTENT - - - */

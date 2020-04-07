@@ -29,7 +29,7 @@ function ScrollTo(section){
 }
 
 function WhiteText(){
-  $('#current-position').addClass('invert-text');
+  $('.current-position').addClass('invert-text');
   $('.title').show().addClass('invert-text');
   $('.connect:eq(0)').addClass('invert-bouton');
   $('.dots').addClass('invert-dots')
@@ -38,7 +38,7 @@ function WhiteText(){
 }
 
 function BlackText(){
-  $('#current-position').removeClass('invert-text');
+  $('.current-position').removeClass('invert-text');
   $('.title').show().removeClass('invert-text');
   $('.connect:eq(0)').removeClass('invert-bouton');
   $('.dots').removeClass('invert-dots')
@@ -62,7 +62,7 @@ function UpdateNavbar(){
      if($(".selected") != $(".dots")[0]){
           $(".selected").removeClass("selected");
           $(".dots:eq(0)").addClass("selected");
-          $("#current-position").html("ACCUEIL");
+          $(".current-position").html("ACCUEIL");
           WhiteText();
           $('#mute').show();
      }
@@ -72,7 +72,7 @@ function UpdateNavbar(){
       if($(".selected") != $(".dots")[1]){
            $(".selected").removeClass("selected");
            $(".dots:eq(1)").addClass("selected");
-           $("#current-position").html("CONCEPT");
+           $(".current-position").html("CONCEPT");
            BlackText();
            $('#mute').hide();
       }
@@ -82,7 +82,7 @@ function UpdateNavbar(){
       if($(".selected") != $(".dots")[2]){
            $(".selected").removeClass("selected");
            $(".dots:eq(2)").addClass("selected");
-           $("#current-position").html("SOLUTION");
+           $(".current-position").html("SOLUTION");
            BlackText();
            $('#mute').hide();
       }
@@ -92,14 +92,13 @@ function UpdateNavbar(){
     if($(".selected") != $(".dots")[3]){
            $(".selected").removeClass("selected");
            $(".dots:eq(3)").addClass("selected");
-           $("#current-position").html("POURQUOI NOUS");
-           BlackText();
+           $(".current-position").html("POURQUOI NOUS");
            $('#mute').hide();
            if($(window).width() < 640){
-             $(".title").addClass("invert-text")
+             WhiteText();
            }
            else{
-             $(".title").removeClass("invert-text")
+            BlackText();
            }
       }
    }
@@ -108,7 +107,7 @@ function UpdateNavbar(){
     if($(".selected") != $(".dots")[4]){
            $(".selected").removeClass("selected");
            $(".dots:eq(4)").addClass("selected");
-           $("#current-position").html("POURQUOI NOUS");
+           $(".current-position").html("POURQUOI NOUS");
            BlackText();
            $('#mute').hide();
       }
@@ -118,7 +117,7 @@ function UpdateNavbar(){
     if($(".selected") != $(".dots")[5]){
            $(".selected").removeClass("selected");
            $(".dots:eq(5)").addClass("selected");
-           $("#current-position").html("NOS JEUX");
+           $(".current-position").html("NOS JEUX");
            WhiteText();
            $('.title').hide();
       }
@@ -128,7 +127,7 @@ function UpdateNavbar(){
     if($(".selected") != $(".dots")[6]){
            $(".selected").removeClass("selected");
            $(".dots:eq(6)").addClass("selected");
-           $("#current-position").html("À PROPOS");
+           $(".current-position").html("À PROPOS");
            BlackText();
            $('#mute').hide();
       }
@@ -138,7 +137,7 @@ function UpdateNavbar(){
     if($(".selected") != $(".dots")[7]){
            $(".selected").removeClass("selected");
            $(".dots:eq(7)").addClass("selected");
-           $("#current-position").html("CONTACT");
+           $(".current-position").html("CONTACT");
            BlackText();
            $('#mute').hide();
       }

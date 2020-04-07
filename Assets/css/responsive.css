@@ -21,6 +21,11 @@
     z-index: 5;
 }
 
+#left-nav{
+    width: 25px;
+    top: 60vh;
+}
+
 
 #menuToggle{
     height: 100vh;
@@ -495,10 +500,20 @@ section{
     top: 0;
 }
 
+#vertical-hightlight::after{
+    left: 150px;
+    width: 200px;
+    top: 350px;
+}
+
 .form-input{
     left: 5%;
     width: 80%;
     top: -45%;
+    -webkit-appearance: none !important;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
 }
 
 textarea{
