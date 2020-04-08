@@ -8,6 +8,7 @@
     <title>Playthesis</title>
     <link rel="shortcut icon" href="Assets/pictures/favicon.ico" type="image/x-icon">
     <link rel="icon" href="Assets/pictures/favicon2.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" media="screen" href="Assets/css/font.css">
     <link rel="stylesheet" media="screen" href="Assets/css/main.css">
     <link rel="stylesheet" media="screen and (max-width: 640px)" href="Assets/css/responsive.css">
@@ -73,9 +74,10 @@
 
     <!-- Content -->
         <section id="intro">     
-            <video autoplay muted loop crossorigin="anonymous" id="video"
-            data-web-video="https://www.playthesis.fr/Assets/video/Video1.mp4"
-            data-mobile-video="https://www.playthesis.fr/Assets/video/video-mobile.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline id="video"
+            data-web-video="Assets/video/Video1.mp4"
+            data-mobile-video="Assets/video/Video1.mp4"
+            src="Assets/video/Video1.mp4" type="video/mp4">
             </video>
 
         </section>
@@ -279,13 +281,13 @@
 <script src="Assets/js/main.js"></script>
 <script>
     UpdateNavbar();
-    if($(window).width() < $(window).height()){
-        $('#video').attr("src", $('#video').attr("data-mobile-video"));
-        $('#video').attr("autoplay", null);
-    }
-    else{
-        $('#video').attr("src", $('#video').attr("data-web-video"));
-    }
+    // if($(window).width() < $(window).height()){
+    //     $('#video').attr("src", $('#video').attr("data-mobile-video"));
+    //     $('#video').attr("autoplay", null);
+    // }
+    // else{
+    //     $('#video').attr("src", $('#video').attr("data-web-video"));
+    // }
 </script>
 
 </html>
