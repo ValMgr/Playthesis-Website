@@ -8,17 +8,25 @@
     <title>Playthesis-jeux</title>
     <link rel="shortcut icon" href="../Assets/pictures/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../Assets/pictures/favicon2.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/a80682f62e.js" crossorigin="anonymous"></script> 
     <link rel="stylesheet" href="../Assets/css/font.css">
     <link rel="stylesheet" href="../Assets/css/main.css">
+    <link rel="stylesheet" href="Seïko/TemplateData/style.css">
+    <script src="Seïko/TemplateData/UnityProgress.js"></script>
+    <script src="Seïko/Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Seïko/Build/Seïko.json", {onProgress: UnityProgress});
+    </script>
 </head>
 <body>
 
     <div class="fixed-elements">
         
-        <h1 id="title" class="invert-text"><a href="../index.html">PLAYTHESIS</a></h1>
+        <h1 class="title invert-text"><a href="../index.html">PLAYTHESIS</a></h1>
 
         <nav id="left-nav">
-            <p id="current-position" class="invert-text">NOS JEUX</p>
+            <p class="current-position invert-text">NOS JEUX</p>
     
             <div id="nav-dots">
                 <a class="dots invert-dots" href="../index.html#into"></a>
@@ -43,12 +51,53 @@
     <div class="content">
         <section id="gameProduct">
             
+                <p id="desc1">Seïko est prévu par notre équipe comme le jeu 
+                    d’introduction au principe de rééducation. Le 
+                    jeu se contrôle uniquement à l’aide de 
+                    contractions simples biceps et triceps, 
+                    permettant ainsi au patient de commencer à 
+                    s’habituer aux mouvements nécessaires à la 
+                    manipulation de sa future prothèse.
+                    <br><br>
+                    Le joueur contrôle ainsi la trajectoire d’une 
+                    étoile filante tombant du ciel, la déplaçant de 
+                    droite à gauche afin d’éviter les branches sur 
+                    son chemin.
+                    </p>
+                
+                <p id="github">Technologie: <a href="#">Unity - C# <i class="fab fa-github"></i></a></p>
         
-            <div class="image">
-                <img class="image-iphone-seïko" src="../Assets/pictures/Games/Seiko/iphoneTEST.png" alt="iphone-image">
+                <img id="mockup" src="../Assets/pictures/Games/Seiko/mockup.png" alt="iphone-image">
+        </section>
+
+        <section id="gameShow">
+            <p id="desc2">
+                En tant que jeu de plateforme, Seïko se base sur un gameplay simple. 
+                Il suffit ici de déplacer son personnage de droite à gauche. 
+                Il n’y a aucune contrainte de temps ni de vitesse, seule la précision compte. 
+                Le seul mode de jeu disponible est un mode infini, 
+                l’idée étant de ne pas restreindre le joueur dans son processus de rééducation.
+            </p>
+            <p id="command">
+                Contrôles : Q - D
+            </p>
+
+
+            <img id="gameMockup" src="../Assets/pictures/Games/Seiko/phone.png">
+            <div class="webgl-content">
+                <div id="unityContainer"></div>
             </div>
+
         </section>
      </div>
     
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<!-- <script src="Assets/js/custom_wowjs.js"></script>  doesnt work with snap scroll css property but ... comming soon :) -->
+<script>
+    
+
+</script>
+
 </html>

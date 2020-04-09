@@ -8,24 +8,17 @@
 
 
 
-$(function() {
-  $.scrollify({
-    section : "section",
-    easing: "easeOutExpo",
-    scrollSpeed: 1500,
-  });
-});
-
-
-
-
 window.addEventListener('scroll', function() {
   UpdateNavbar();
   
 });
 
 function ScrollTo(section){
-  $.scrollify.move(section);
+  $('section')[section].scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest"
+  });
 }
 
 function WhiteText(){
