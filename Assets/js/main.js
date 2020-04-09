@@ -6,7 +6,7 @@
  * MMI Bordeaux - IUT Bordeaux Montaigne
  */
 
-
+var muted = 0;
 
 window.addEventListener('scroll', function() {
   UpdateNavbar();
@@ -27,7 +27,8 @@ function WhiteText(){
   $('.connect:eq(0)').addClass('invert-bouton');
   $('.dots').addClass('invert-dots')
   $('.nav-span').children().addClass('white-burger')
-
+  muted = 0;
+  UpdateSound();
 }
 
 function BlackText(){
@@ -36,7 +37,8 @@ function BlackText(){
   $('.connect:eq(0)').removeClass('invert-bouton');
   $('.dots').removeClass('invert-dots')
   $('.nav-span').children().removeClass('white-burger')
-
+  muted = 1;
+  UpdateSound();
 }
 
 function UpdateNavbar(){
@@ -57,7 +59,6 @@ function UpdateNavbar(){
           $(".dots:eq(0)").addClass("selected");
           $(".current-position").html("ACCUEIL");
           WhiteText();
-          $('#mute').show();
      }
   }
 
@@ -67,7 +68,6 @@ function UpdateNavbar(){
            $(".dots:eq(1)").addClass("selected");
            $(".current-position").html("CONCEPT");
            BlackText();
-           $('#mute').hide();
       }
    }
 
@@ -77,7 +77,6 @@ function UpdateNavbar(){
            $(".dots:eq(2)").addClass("selected");
            $(".current-position").html("SOLUTION");
            BlackText();
-           $('#mute').hide();
       }
    }
 
@@ -86,7 +85,7 @@ function UpdateNavbar(){
            $(".selected").removeClass("selected");
            $(".dots:eq(3)").addClass("selected");
            $(".current-position").html("POURQUOI NOUS");
-           $('#mute').hide();
+
            if($(window).width() < 640){
              WhiteText();
            }
@@ -102,7 +101,6 @@ function UpdateNavbar(){
            $(".dots:eq(4)").addClass("selected");
            $(".current-position").html("POURQUOI NOUS");
            BlackText();
-           $('#mute').hide();
       }
    }
    
@@ -122,7 +120,6 @@ function UpdateNavbar(){
            $(".dots:eq(6)").addClass("selected");
            $(".current-position").html("À PROPOS");
            BlackText();
-           $('#mute').hide();
       }
    }
    
@@ -132,19 +129,26 @@ function UpdateNavbar(){
            $(".dots:eq(7)").addClass("selected");
            $(".current-position").html("CONTACT");
            BlackText();
-           $('#mute').hide();
       }
    }
 }
 
+function UpdateSound(){
+  if($('#video').prop('muted') == true){
+    $('#mute-btn').attr('src', 'Assets/pictures/icons/mute'+muted+'.png');
+  }
+  else{
+    $('#mute-btn').attr('src', 'Assets/pictures/icons/speaker'+muted+'.png');
+  }
+}
 
 function muteSound(){
   if($('#video').prop('muted') == false){
     $('#video').prop('muted', true);
-    $('#mute-btn').attr('src', 'Assets/pictures/icons/mute.png');
+    $('#mute-btn').attr('src', 'Assets/pictures/icons/mute'+muted+'.png');
   }
   else{
     $('#video').prop('muted', false);
-    $('#mute-btn').attr('src', 'Assets/pictures/icons/speaker.png');
+    $('#mute-btn').attr('src', 'Assets/pictures/icons/speaker'+muted+'.png');
   }
 }

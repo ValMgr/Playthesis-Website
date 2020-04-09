@@ -928,7 +928,7 @@ footer{
 #desc2{
     grid-row: 3 / 6;
     grid-column: 4 / 6;
-    width: 70%;
+    width: 75%;
     color: white;
     justify-content: center;
     left: 25%;
@@ -941,6 +941,7 @@ footer{
     grid-column: 4 / 6;
     position: relative;
     left: 25%;
+    top: 15%;
 }
 
 #unityContainer{
@@ -972,22 +973,6 @@ footer{
     top: 0 !important;
     left: 0 !important;
    
-}
-
-#gameSound{
-    grid-row: 5 / 6;
-    grid-column: 4 / 6;
-    width: 100px;
-    height: 35px;
-    border: none;
-    border-radius: 20px;
-    position: relative;
-    top: 25%;
-    left: 25%;
-    color: #242424;
-    background-color: white;
-    font-family: 'Lato';
-    font-weight: bold;
 }
 
 /* - - - HIDE MOBILE CONTENT - - - */
