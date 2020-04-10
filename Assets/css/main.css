@@ -975,6 +975,37 @@ footer{
    
 }
 
+.scroll{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    display: block;
+    width: 20px;
+    height: 35px;
+    border-radius: 10px;
+    border: solid 1px white;
+    animation: blink 2s infinite ease;
+}
+
+.scroll::after{
+    content: '';
+    position: relative;
+    left: 45%;
+    top: 15%;
+    display: block;
+    width: 1px;
+    height: 10px;
+    background-color: white;
+}
+
+@keyframes blink {
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+
 /* - - - HIDE MOBILE CONTENT - - - */
 
 .mobile-nav{
